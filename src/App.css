@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+}
+
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.button-container {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-button {
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+  color: #1e3c72;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.08);
+}
+.back-button {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+
+  padding: 14px 26px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+
+  background-color: white;
+  color: #1e3c72;
+  font-weight: 600;
+
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Hover / gesture focus */
+.back-button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.08);
+}
+.dept-detail-page {
+  min-height: 100vh;
+  padding: 60px 80px 120px;
+  background: linear-gradient(135deg, #f5f7fa, #dbe4f0);
+  color: #1e3c72;
+}
+
+.dept-name {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.dept-intro {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 1000px;
+}
+
+.hod-section {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.hod-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.stats-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  width: 220px;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-weight: 600;
+}
+
+.stat-card.highlight {
+  background: #ffcc00;
+  color: black;
+}
+
+.recruiters h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.recruiters p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+

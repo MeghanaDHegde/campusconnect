@@ -1,0 +1,65 @@
+.dept-detail-page {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.dept-name {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.dept-intro {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin: 40px 0 20px;
+  border-left: 5px solid #b30000;
+  padding-left: 10px;
+}
+
+.placard-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.placard-card {
+  flex: 1 1 260px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  flex: 1 1 180px;
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.stat-card.highlight {
+  background: #b30000;
+  color: #fff;
+}
+
+.recruiters {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+}
