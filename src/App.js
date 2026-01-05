@@ -8,13 +8,18 @@ import CSE from "./CSE";
 import ECE from "./ECE";
 import Placements from "./Placements";
 import Admission from "./Admission";
-
+import useVoiceNavigation from "./useVoiceNavigation"; 
 
 import "./App.css";
+function VoiceController() {
+  useVoiceNavigation();
+  return null;
+}
 
-function App() {
+function App() { 
   return (
     <Router>
+      <VoiceController /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/departments" element={<Departments />} />
