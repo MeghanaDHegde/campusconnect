@@ -1,6 +1,6 @@
 import React from "react";
 import BackButton from "./BackButton";
-
+import "./DeptDetail.css";
 const ASE = () => {
   return (
     <div className="dept-detail-page">
@@ -26,13 +26,6 @@ const ASE = () => {
         Boeing India–backed elective on Product Design and Development, adding
         strong industry relevance.
       </p>
-
-      {/* HOD / PROGRAM HIGHLIGHT */}
-      <div className="hod-section">
-        <h3>Programme Highlights</h3>
-        <p>Advanced Aerospace Laboratories</p>
-        <p>Industry‑backed Electives & Research Exposure</p>
-      </div>
 
       {/* PLACEMENT STATS */}
       <div className="stats-container">

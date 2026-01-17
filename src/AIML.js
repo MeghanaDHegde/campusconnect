@@ -26,12 +26,6 @@ const AIML = () => {
         Language Processing, Data Science, Computer Vision and more.
       </p>
 
-      <div className="hod-section">
-        <h3>Head of Department</h3>
-        <p>Dr. Sathish Babu B</p>
-        <p>Professor & HoD, Dept. of AI & ML</p>
-      </div>
-
       <div className="stats-container">
         <div className="stat-card">
           <h2>47</h2>

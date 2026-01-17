@@ -1,128 +1,186 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BackButton from "./BackButton";
+import "./Admission.css";
 
-const AdmissionsUG = () => {
-  return (
-    <div className="dept-detail-page">
-      <BackButton />
+const Admission = () => {
+  useEffect(() => {
+    const app = document.getElementById("app");
+    if (!app) return;
 
-      <h1 className="dept-name">Undergraduate Programmes – Admissions</h1>
+    app.innerHTML = `
+      <!-- HERO -->
+      <section class="hero">
+        <span class="badge">🎓 Academic Year 2025–26</span>
+        <h1>Undergraduate Programmes</h1>
+        <p>Admissions Information Kiosk</p>
 
-      {/* ACADEMIC ELIGIBILITY */}
-      <div className="info-card">
-        <h3 className="section-title">Academic Eligibility – B.E. Programmes</h3>
-      </div>
+        <div class="hero-cards">
+          <div class="mini-card">📘 B.E. Engineering</div>
+        </div>
+      </section>
 
-      <div className="horizontal-card">
-        <h4 className="sub-title">General Merit Candidates</h4>
-        <ul className="dept-list">
-          <li>Passed 2nd PUC / 12th Standard / equivalent with English</li>
-          <li>
-            Minimum <strong>45% aggregate</strong> in Physics & Mathematics
-            (compulsory) plus one optional subject:
-            Chemistry / Biotechnology / Biology / Computer Science / Electronics
-          </li>
-        </ul>
-      </div>
+      <!-- ELIGIBILITY -->
+      <section class="section">
+        <h2>Academic Eligibility</h2>
+        <p class="subtitle">B.E. Programmes Requirements</p>
 
-      <div className="horizontal-card">
-        <h4 className="sub-title">SC / ST & OBC (Karnataka)</h4>
-        <ul className="dept-list">
-          <li>Passed 2nd PUC / 12th Standard / equivalent with English</li>
-          <li>
-            Minimum <strong>40% aggregate</strong> in Physics & Mathematics
-            (compulsory) plus one optional subject
-          </li>
-          <li>
-            If Chemistry marks are low, marks from Biotechnology / Biology /
-            Computer Science / Electronics may be considered
-          </li>
-        </ul>
-      </div>
+        <div class="card-grid">
+          <div class="card">
+            <span class="tag blue">45% Aggregate</span>
+            <h3>General Merit Candidates</h3>
+            <ul>
+              <li>Passed 2nd PUC / 12th / equivalent with English</li>
+              <li>Minimum 45% in Physics & Mathematics</li>
+              <li>
+                One optional subject:
+                Chemistry / Biotechnology / Biology / CS / Electronics
+              </li>
+            </ul>
+          </div>
 
-      {/* ADMISSION CHANNELS */}
-      <div className="info-card">
-        <h3 className="section-title">Admission Channels</h3>
-      </div>
+          <div class="card">
+            <span class="tag orange">40% Aggregate</span>
+            <h3>SC / ST & OBC (Karnataka)</h3>
+            <ul>
+              <li>Passed 2nd PUC / 12th / equivalent with English</li>
+              <li>Minimum 40% in Physics & Mathematics</li>
+              <li>One optional subject from approved list</li>
+            </ul>
+            <p class="note">
+              <i>If Chemistry marks are low, other optional subjects may be considered</i>
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <div className="admission-grid">
-        <div className="stat-card">
-          <h3>KEA Quota</h3>
-          <p>Government Quota</p>
-          <span className="link-text">Visit KEA Website</span>
+      <!-- ADMISSION CHANNELS -->
+      <section class="section">
+        <h2>Admission Channels</h2>
+        <p class="subtitle">The different admission pathways</p>
+
+        <div class="list">
+          <div class="list-item">
+            <div>
+              <small>GOVERNMENT QUOTA</small>
+              <h4>KEA Quota</h4>
+              <p>Karnataka Examinations Authority</p>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div>
+              <small>CONSORTIUM QUOTA</small>
+              <h4>COMED-K</h4>
+              <p>Consortium of Medical, Engineering & Dental Colleges</p>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div>
+              <small>MANAGEMENT QUOTA</small>
+              <h4>Management</h4>
+              <p>Direct institutional admission</p>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div>
+              <small>OCI / PIO / NEPAL</small>
+              <h4>CIWG / NRI</h4>
+              <p>International admissions</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCUMENTS -->
+      <section class="section">
+        <h2>Required Documents</h2>
+        <p class="subtitle">Supernumerary Quotas Documentation</p>
+
+        <div class="tabs">
+          <button class="tab active" data-type="pio">PIO Quota</button>
+          <button class="tab" data-type="nepal">Nepal Citizen</button>
+          <button class="tab" data-type="gulf">GULF / CIWG</button>
         </div>
 
-        <div className="stat-card">
-          <h3>COMED-K</h3>
-          <p>Consortium Quota</p>
-          <span className="link-text">Visit COMED-K Website</span>
-        </div>
+        <div class="docs"></div>
+      </section>
 
-        <div className="stat-card">
-          <h3>Management</h3>
-          <p>Management Quota</p>
-          <span className="link-text">Visit Official Website</span>
-        </div>
-
-        <div className="stat-card">
-          <h3>CIWG / NRI</h3>
-          <p>OCI / PIO / Nepal</p>
-          <span className="link-text">Visit Admissions Website</span>
-        </div>
-      </div>
-
-      {/* DOCUMENTS */}
-      <div className="info-card">
-        <h3 className="section-title">
-          Required Documents – Supernumerary Quotas
-        </h3>
-      </div>
-
-      <div className="horizontal-card">
-        <h4 className="sub-title">PIO Quota</h4>
-        <ul className="dept-list">
-          <li>10th & 12th Marks Cards</li>
-          <li>Transfer Certificate (TC)</li>
-          <li>Migration Certificate</li>
-          <li>Student Passport & Visa</li>
-          <li>OCI Card</li>
-        </ul>
-      </div>
-
-      <div className="horizontal-card">
-        <h4 className="sub-title">Nepal Citizen Quota</h4>
-        <ul className="dept-list">
-          <li>10th & 12th Marks Cards</li>
-          <li>Transfer Certificate (TC)</li>
-          <li>Migration Certificate</li>
-          <li>Student Passport & Visa</li>
-          <li>Nepal Citizenship Card / Passport</li>
-          <li>OCI Card</li>
-        </ul>
-      </div>
-
-      <div className="horizontal-card">
-        <h4 className="sub-title">GULF / CIWG Quota</h4>
-        <ul className="dept-list">
-          <li>10th & 12th Marks Cards</li>
-          <li>Transfer Certificate & Migration Certificate</li>
-          <li>Parent Employment Proof (Original)</li>
-          <li>Parent NRI Certificate from Embassy</li>
-          <li>Parent Passport, Visa / Iqama</li>
-          <li>Student Passport</li>
-        </ul>
-      </div>
-
-      {/* NOTE */}
-      <div className="info-card highlight-card">
-        <p className="dept-desc">
-          <strong>Note:</strong> Foreign board students must submit an
-          Equivalence Certificate issued by the Association of Indian
-          Universities (AIU), New Delhi (if applicable).
+      <!-- NOTE -->
+      <section class="section">
+        <strong>Important Note</strong>
+        <p>
+          Foreign board students must submit an
+          <b> Equivalence Certificate </b>
+          issued by the
+          <b> Association of Indian Universities (AIU)</b>, New Delhi.
         </p>
-      </div>
-    </div>
-  );
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        For more information, please contact the Admissions Office
+      </footer>
+    `;
+
+    const docsData = {
+      pio: [
+        "10th & 12th Marks Cards",
+        "Transfer Certificate (TC)",
+        "Migration Certificate",
+        "Student Passport & Visa",
+        "OCI Card"
+      ],
+      nepal: [
+        "10th & 12th Marks Cards",
+        "Transfer Certificate (TC)",
+        "Migration Certificate",
+        "Student Passport & Visa",
+        "Nepal Citizenship Card / Passport",
+        "OCI Card"
+      ],
+      gulf: [
+        "10th & 12th Marks Cards",
+        "Transfer & Migration Certificate",
+        "Parent Employment Proof (Original)",
+        "Parent NRI Certificate from Embassy",
+        "Parent Passport, Visa / Iqama",
+        "Student Passport"
+      ]
+    };
+
+    const docsContainer = app.querySelector(".docs");
+    const tabs = app.querySelectorAll(".tab");
+
+    function renderDocs(type) {
+      docsContainer.innerHTML = docsData[type]
+        .map(item => `<div class="doc">${item}</div>`)
+        .join("");
+    }
+
+    // Default load
+    renderDocs("pio");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const type = tab.getAttribute("data-type");
+        renderDocs(type);
+      });
+    });
+  }, []);
+
+  return (
+  <>
+    <BackButton />
+    <div id="app"></div>
+  </>
+);
+
+  
 };
 
-export default AdmissionsUG;
+export default Admission;

@@ -31,13 +31,6 @@ const CSE = () => {
         problem-solving through AI, ML, Cyber Security, Data Science and more.
       </p>
 
-      {/* DEAN SECTION */}
-      <div className="hod-section">
-        <h3>Dean – CSE Cluster</h3>
-        <p>Dr. Ramakanth Kumar P</p>
-        <p>Professor & Dean, CSE Cluster, RVCE</p>
-        <p>Email: dean.csecluster@rvce.edu.in</p>
-      </div>
 
       {/* PLACEMENT STATS */}
       <div className="stats-container">

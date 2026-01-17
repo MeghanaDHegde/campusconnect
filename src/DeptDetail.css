@@ -1,0 +1,74 @@
+/* Page background */
+.dept-detail-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;   /* CRITICAL */
+  width: 100%;
+}
+
+/* Heading */
+.dept-detail-page .dept-name {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Intro text */
+.dept-detail-page .dept-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #e0e0e0;
+}
+
+/* Stats section */
+.dept-detail-page .stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+/* Stat cards */
+.dept-detail-page .stat-card {
+  background-color: #000;
+  border: 1px solid #333;
+  padding: 22px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dept-detail-page .stat-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.dept-detail-page .stat-card p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Hover effect */
+.dept-detail-page .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+}
+
+/* Highlight card */
+.dept-detail-page .stat-card.highlight {
+  border-color: #fff;
+}
+
+/* Recruiters section */
+.dept-detail-page .recruiters {
+  margin-top: 30px;
+}
+
+.dept-detail-page .recruiters h3 {
+  margin-bottom: 10px;
+}
+
+.dept-detail-page .placement-note {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}

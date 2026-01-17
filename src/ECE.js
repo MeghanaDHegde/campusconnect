@@ -32,13 +32,6 @@ const ECE = () => {
         and VTU affiliated, with multiple NBA accreditations.
       </p>
 
-      {/* HOD SECTION */}
-      <div className="hod-section">
-        <h3>Head of the Department</h3>
-        <p>Dr. Ravish Aradhya H V</p>
-        <p>HoD, Electronics & Communication Engineering, RVCE</p>
-      </div>
-
       {/* PLACEMENT STATS */}
       <div className="stats-container">
         <div className="stat-card">
