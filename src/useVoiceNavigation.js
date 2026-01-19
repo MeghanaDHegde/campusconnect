@@ -44,24 +44,25 @@ export default function useVoiceNavigation() {
 
       /* ---------- Detect specific departments ---------- */
       const mentionsSpecificDept =
-        cmd.includes("computer science") ||
-        cmd.includes("computer")
-        cmd.includes("cse") ||
-        cmd.includes("electronics") ||
-        cmd.includes("electronics and communication") ||
-        cmd.includes("ece") ||
-        cmd.includes("mechanical") ||
-        cmd.includes("mech") ||
-        cmd.includes("artificial intelligence") ||
-        cmd.includes("machine learning") ||
-        cmd.includes("artificial intelligence and machine learning") ||
-        cmd.includes("aiml") ||
-        cmd.includes("aerospace") ||
-        cmd.includes("ase");
+      cmd.includes("computer science") ||
+      cmd.includes("computer") ||     // ✅ FIXED
+      cmd.includes("cse") ||
+      cmd.includes("electronics") ||
+      cmd.includes("electronics and communication") ||
+      cmd.includes("ece") ||
+      cmd.includes("mechanical") ||
+      cmd.includes("chemical") ||
+      cmd.includes("civil") ||
+      cmd.includes("industrial") ||
+      cmd.includes("artificial intelligence") ||
+      cmd.includes("machine learning") ||
+      cmd.includes("aiml") ||
+      cmd.includes("aerospace") ||
+      cmd.includes("ase");
 
       /* ========== MAIN PAGES ========== */
 
-      if (cmd.includes("home")) {
+      if (cmd.includes("home") || cmd.includes("main page")) {
         targetPath = "/";
         message = "Going to home page";
       }
@@ -83,19 +84,72 @@ export default function useVoiceNavigation() {
 
       /* ========== DEPARTMENTS ========== */
 
-      else if (cmd.includes("computer science") || cmd.includes("cse")) {
+      else if (cmd.includes("computer science") || cmd.includes("cse") || cmd.includes("c s e")) {
         targetPath = "/departments/cse";
         message = "Opening Computer Science Engineering ";
       }
 
-      else if (cmd.includes("electronics") || cmd.includes("ece")) {
+      else if (cmd.includes("cs-ds") || cmd.includes("data science")) {
+        targetPath = "/departments/ds";
+        message = "Opening Data Science";
+      }
+
+      else if (cmd.includes("cy") || cmd.includes("cyber security") || cmd.includes("cyber")) {
+        targetPath = "/departments/cyber";
+        message = "Opening Cyber Security";
+      }
+    
+
+      else if ( cmd.includes("biotechnology") || cmd.includes("bio technology") || cmd.includes("biotech")) {
+        targetPath = "/departments/bt";
+        message = "Opening Biotechnology";
+      }
+
+      else if ( cmd.includes("chem") || cmd.includes("chemical")) {
+        targetPath = "/departments/ch";
+        message = "Opening Chemical Engineering";
+      }
+
+      else if (cmd.includes("electronics and communications") || cmd.includes("ece") || cmd.includes("e c e") || cmd.includes("communication")) {
         targetPath = "/departments/ece";
         message = "Opening Electronics and Communication ";
       }
 
+      else if (cmd.includes("electrical") || cmd.includes("eee") || cmd.includes("e e e")) {
+        targetPath = "/departments/eee";
+        message = "Opening Electrical and Electronics ";
+      }
+
+      else if (cmd.includes("electronics and instrumentation") || cmd.includes("eie") || cmd.includes("e i e") || cmd.includes("instrumentation")) {
+        targetPath = "/departments/eie";
+        message = "Opening Electronics and Instrumentation ";
+      }
+
+
+
+      else if (cmd.includes("electronics and telecom") || cmd.includes("ete") || cmd.includes("e t e") || cmd.includes("telecommunication") || cmd.includes("telecom")) {
+        targetPath = "/departments/ete";
+        message = "Opening Electronics and Telecommunication ";
+      }
+
       else if (cmd.includes("mechanical") || cmd.includes("mech")) {
-        targetPath = "/departments/mech";
+        targetPath = "/departments/me";
         message = "Opening Mechanical Engineering ";
+      }
+
+       else if (cmd.includes("civil") ) {
+        targetPath = "/departments/cv";
+        message = "Opening Civil Engineering ";
+      }
+
+       else if (cmd.includes("information science") || cmd.includes("ise") || cmd.includes("i s e")) {
+        targetPath = "/departments/ise";
+        message = "Opening Information Science and Engineering ";
+      }
+
+       else if (cmd.includes("industrial engineering") || cmd.includes("industrial management") || cmd.includes("iem")) {
+        targetPath = "/departments/iem";
+        message = "Opening Industrial Engineering and Management ";
       }
 
       else if (
@@ -140,7 +194,7 @@ export default function useVoiceNavigation() {
       /* ========== NAVIGATE ========== */
 
       if (targetPath && targetPath !== lastPath.current) {
-        speak(message);
+        //speak(message);
         navigate(targetPath);
         lastPath.current = targetPath;
       }
