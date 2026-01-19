@@ -59,7 +59,7 @@ function Departments() {
     { name: "📊 B.E. in CSE (Data Science)", route: "/departments/ds" },
     { name: "⚡ B.E. in Electrical & Electronics Engineering", route: "/departments/eee" },
     { name: "📡 B.E. in Electronics & Communication Engineering", route: "/departments/ece" },
-    { name: "🎛️ B.E. in Electronics & Instrumentation Engineering", route: "/departments/ei" },
+    { name: "🎛️ B.E. in Electronics & Instrumentation Engineering", route: "/departments/eie" },
     { name: "🏭 B.E. in Industrial Engineering & Management", route: "/departments/iem" },
     { name: "🖥️ B.E. in Information Science & Engineering", route: "/departments/ise" },
     { name: "⚙️ B.E. in Mechanical Engineering", route: "/departments/me" },

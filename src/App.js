@@ -16,6 +16,7 @@ import DS from "./DS";
 import EEE from "./EEE";
 import EIE from "./EIE";
 import IEM from "./IEM";
+import ETE from "./ETE";
 import Placements from "./Placements";
 
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/departments/eee" element={<EEE />} />
         <Route path="/departments/eie" element={<EIE />} />
         <Route path="/departments/iem" element={<IEM />} />
+        <Route path="/departments/ete" element={<ETE />} />
         <Route path="/placements" element={<Placements />} />
         <Route path="/admissions" element={<Admission />} />
         

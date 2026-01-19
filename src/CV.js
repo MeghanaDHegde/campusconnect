@@ -4,7 +4,7 @@ import BackButton from "./BackButton";
 const Civil = () => {
   return (
     <div className="dept-detail-page">
-      <BackButton />
+      <BackButton to="/departments"/>
 
       <h1 className="dept-name">
         Civil Engineering

@@ -4,7 +4,8 @@ import BackButton from "./BackButton";
 const ECE = () => {
   return (
     <div className="dept-detail-page">
-      <BackButton />
+      <BackButton to="/departments" />
+
 
       <h1 className="dept-name">
         Electronics & Communication Engineering (ECE)

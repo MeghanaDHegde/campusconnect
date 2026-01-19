@@ -4,7 +4,8 @@ import BackButton from "./BackButton";
 const AIML = () => {
   return (
     <div className="dept-detail-page">
-      <BackButton />
+      <BackButton to="/departments" />
+
 
       <h1 className="dept-name">
         Artificial Intelligence & Machine Learning (AIML)
