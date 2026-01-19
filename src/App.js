@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import GestureController from "./GestureController"; // ✅ FIX
+import useVoiceNavigation from "./useVoiceNavigation";
+
 import Home from "./Home";
 import Departments from "./Departments";
 import ASE from "./ASE";
@@ -18,28 +22,21 @@ import EIE from "./EIE";
 import IEM from "./IEM";
 import ETE from "./ETE";
 import Placements from "./Placements";
-
-
-import useVoiceNavigation from "./useVoiceNavigation"; 
-
-
 import Admission from "./Admission";
 
-
 import "./App.css";
+
 function VoiceController() {
   useVoiceNavigation();
   return null;
 }
 
-
-
-
-
-function App() { 
+function App() {
   return (
     <Router>
-      <VoiceController /> 
+      <GestureController />   {/* now works */}
+      <VoiceController />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/departments" element={<Departments />} />
@@ -60,11 +57,9 @@ function App() {
         <Route path="/departments/ete" element={<ETE />} />
         <Route path="/placements" element={<Placements />} />
         <Route path="/admissions" element={<Admission />} />
-        
       </Routes>
     </Router>
   );
 }
-
 
 export default App;
