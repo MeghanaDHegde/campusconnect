@@ -68,7 +68,7 @@ function Departments() {
 
   return (
     <div style={pageStyle}>
-      <BackButton />
+      <BackButton to="/"/>
 
       <h2 style={titleStyle}>Departments</h2>
 
